@@ -1,0 +1,136 @@
+<!-- projects.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEKTURA LLC | Our Projects</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">TEKTURA LLC</a>
+
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+    <label class="nav-toggle-label" for="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT US</a>
+      <a class="active" href="projects.html">OUR PROJECTS</a>
+      <a href="services.html">SERVICES</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+
+
+  </div>
+</header>
+
+<section class="page-hero"
+  style="background-image: url('https://plus.unsplash.com/premium_photo-1727080902453-0cfc487d8c98?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5c2NhcHBlcnxlbnwwfHwwfHx8MA%3D%3D');">
+  <div class="content">
+    <h1>OUR PROJECTS</h1>
+    <div class="title-underline"></div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container narrow center">
+    <h2 class="section-title">International Trajectory &amp; Technical Excellence</h2>
+    <p class="lead">
+      With experience across public and private sectors, we deliver infrastructure, urban parks, and
+      community-centered projects with disciplined execution.
+    </p>
+
+    <div class="bullet-box" style="text-align:left;">
+      <h3 class="mini-title">Key Expertise:</h3>
+      <ul class="bullets">
+        <li>Infrastructure Management</li>
+        <li>Park &amp; Urban Design</li>
+        <li>Specialized Renovation &amp; Maintenance</li>
+      </ul>
+    </div>
+
+<article class="project-card">
+
+  <!-- Gallery -->
+  <div class="project-gallery">
+    <img src="projects/structural-01.jpg" alt="Structural Engineering project view 1" loading="lazy" class="lightbox-img">
+    <img src="projects/structural-02.jpg" alt="Structural Engineering project view 2" loading="lazy" class="lightbox-img">
+    <img src="projects/structural-03 (1).jpg" alt="Structural Engineering project view 3" loading="lazy" class="lightbox-img">
+  </div>
+
+  <h3>Structural Engineering &amp; Institutional Design</h3>
+
+  <p class="project-meta">
+    Colombia • Institutional &amp; Educational Facilities
+  </p>
+
+  <p>
+    With a proven track record in Colombia’s high-stakes construction landscape,
+    Tektura brings elite international expertise to every project. Specializing
+    in institutional buildings and educational facilities, we have successfully
+    led large-scale remodeling and ground-up construction projects that demand
+    the highest standards of safety and durability.
+  </p>
+
+  <p>
+    Our technical edge lies in mastering complex materials. Unlike light-frame
+    construction, our experience is rooted in heavy-duty reinforced concrete and
+    structural steelwork engineering methods that require precision, advanced
+    structural integrity, and a deep understanding of long-lasting masonry. From
+    specialized laboratory construction to modernizing educational spaces, we
+    build infrastructures that are as resilient as they are intelligent.
+  </p>
+
+</article>
+
+
+    <a class="btn" href="contact.html">REQUEST A CONSULTATION</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>TEKTURA LLC | All Rights Reserved | 2025</p>
+    <a class="to-top" href="#">Back to top</a>
+  </div>
+</footer>
+<div id="lightbox">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-image" src="" alt="">
+</div>
+<script>
+  const images = document.querySelectorAll('.lightbox-img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImage.src = img.src;
+    });
+  });
+
+  lightboxClose.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', e => {
+    if (e.target !== lightboxImage) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
